@@ -1,0 +1,45 @@
+[
+    {
+      "name": "ARE",
+      "description": {
+        "summary": "Allocation d'aide au Retour à l'Emploi",
+        "definition": "Nom de l'allocation d'assurance chômage depuis la convention 2001"
+      },
+      "creation": "02/12/2010",
+      "author": "Claude Pecheux",
+      "obsolete": "false",
+      "motclefs": [
+        "règlementation 2001",
+        "motcle2",
+        "motcle3"
+      ]
+    },
+    {
+      "name": "AREF",
+      "description": {
+        "summary": "Allocation Retour à l'Emploi pour la Formation",
+        "definition": " Conventions d'assurance chômage depuis 2001. L'ARE continue d'être servie lors de périodes de formation : AREF"
+      },
+      "creation": "02/12/2010",
+      "author": "Claude Pecheux",
+      "obsolete": "false",
+      "motclefs": [
+        "règlementation 2001",
+        "motcle2",
+        "motcle3"
+      ]
+    },
+    {
+      "name": "ASAPE",
+      "description": {
+        "summary": "Application de Synthèse des Aides Pour l'Emploi",
+        "definition": "Application destinée à donner rapidement aux conseillers une information nationale sur les aides et mesures applicables potentiellement à la situation personnelle d'un demandeur"
+      },
+      "creation": "11/10/2013",
+      "author": "Eric Hartaut",
+      "obsolete": "false",
+      "motclefs": [
+        "motclé1",
+        "motcle2",
+        "motcle3"
+      ]}]

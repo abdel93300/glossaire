@@ -1,4 +1,4 @@
-package com.pe.glossaire;
+package com.pe.glossaire.model;
 
 public class Description {
     public  String  shortD;

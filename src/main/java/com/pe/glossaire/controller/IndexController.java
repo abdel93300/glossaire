@@ -1,4 +1,4 @@
-package com.pe.glossaire;
+package com.pe.glossaire.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

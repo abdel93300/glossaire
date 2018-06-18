@@ -125,4 +125,16 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
+.spanmenu {
+padding-top: 35px;
+height:40px;
+margin-left:350px;
+font-size:18px;
+}
+.divmenu {
+padding-top: 35px;
+display:inline-block;
+height:50px;
+margin-bottom:25px;
+font-size:20px;
+}

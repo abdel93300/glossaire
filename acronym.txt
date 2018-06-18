@@ -1,0 +1,15 @@
+{
+      "name": "ARE",
+      "description": {
+        "summary": "Allocation d'aide au Retour à l'Emploi",
+        "definition": "Nom de l'allocation d'assurance chômage depuis la convention 2001"
+      },
+      "creation": "02/12/2010",
+      "author": "Claude Pecheux",
+      "obsolete": "false",
+      "motclefs": [
+        "règlementation 2001",
+        "motcle2",
+        "motcle3"
+      ]
+    }

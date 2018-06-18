@@ -1,4 +1,4 @@
-package com.pe.glossaire;
+package com.pe.glossaire.model;
 
 
 public class Acronym {
@@ -9,6 +9,10 @@ public class Acronym {
     public boolean obsolete;
     public String[] motClefs;
 
+
+    public Acronym(){
+
+    }
 
     public Acronym(String name, Description description, String creation, String author, boolean obsolete, String[] motClefs) {
         this.name = name;
