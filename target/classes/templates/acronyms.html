@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste acronymes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Bootstrap4 core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>
+    <style>
+        .navigation-order{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<!--suppress Annotator -->
+<body>
+
+
+<div class="row" style="height: 120px;background-color:#EBEBDC;">
+    <img src="img/dico.png" alt="Dico photo" style="height: 80px; left: 20px; position: absolute; top: 15px; width: 80px;"/>
+    <div style="position:absolute; left:100px; top:45px; height:45px; background-color:#EBEBDC; font-family:'Arial Gras Italique', 'Arial';
+                font-weight:700; font-style:italic; font-size:22px; text-decoration:none; color:#FF6633; text-align:left;
+                border-color:transparent; outline-style:none;">DicoDsi
+    </div>
+    <span class="spanmenu">&nbsp;&nbsp;</span>
+    <div  class="divmenu">
+        <input type="text" style="width:380px; margin-left:16px;font-size:16px;" />
+        <button type="submit" id="btn_search">
+            <img src="img/search.png" alt="Search Logo"></button>
+
+        <img src="img/logo_pe.png" alt="logo_pe photo" style="height: 80px;right: 20px;justify-content:right;position: absolute; top: 15px; width: 80px;" />
+
+    </div>
+    <div class="row" style="height:30px;">
+        <label style="background-color:#EBEBDC;margin-left:360px;font-size:18px;">Mots clé :&nbsp</label>
+        <input type="text" id="motcle1" aria-label="mot clé 1"/>&nbsp;
+        <input type="text" id="motcle2" />&nbsp;
+        <input type="text" id="motcle3" />
+    </div>
+</div>
+<div class="container">
+
+
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h6>12 terme peuvent correspondre à votre recherche</h6>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Résumé</th>
+                        <th>Définition</th>
+                        <th>creation</th>
+                        <th>author</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr th:each="acronym : ${acronyms}">
+                        <td th:text="${acronym.name}"></td>
+                        <td th:text="${acronym.description.shortD}"></td>
+                        <td th:text="${acronym.description.longD}"></td>
+                        <td th:text="${acronym.creation}"></td>
+                        <td th:text="${acronym.author}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+ </div>
+
+<footer  style="height:80px;background-color:#EBEBDC;  position: absolute;
+  bottom: 0;
+  width: 100%;" >
+    <div class="float-lg-left" th:text="${nombre} + ' termes à la  date du 16/06/2018'">
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 h-40 text-lg-right">
+                <ul class="list-inline mb-2">
+                    <li  class="list-inline-item">
+                        <a  class="ex2" style="color:#E66E0A;" href="#">A propos</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a  class="ex2" style="color:#E66E0A;" href="#">Contacter l'administrateur</a>
+                    </li>
+                </ul>
+                <p class="text-muted small mb-4 mb-lg-0">&copy; Site DSI 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
