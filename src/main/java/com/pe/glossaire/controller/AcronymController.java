@@ -7,26 +7,43 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.List;
-
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class AcronymController {
 
     @Autowired
-    AcronymService acronymService;
+    private AcronymService acronymService;
 
 
     @GetMapping("/acronyms")
-    public String acronym(Integer nombre,Model model){
+    public String acronym(Integer nombre, Model model) {
 
-        List<Acronym> acronyms = acronymService.listAll();
+        Iterable<Acronym> acronyms = acronymService.retrieve();
         model.addAttribute("acronyms", acronyms);
         model.addAttribute("nombre", "100");
         return "acronyms";
     }
+    @GetMapping("/acronyms/{name}")
+    public String searchAcronyms(Integer nombre, Model model) {
+        Iterable<Acronym> acronyms = acronymService.retrieveByName("name");
+        model.addAttribute("acronyms", acronyms);
+        model.addAttribute("nombre", "100");
+        return "acronyms";
+    }
+
+    @RequestMapping(value = { "/acronymAdd" }, method = RequestMethod.GET)
+    public String showAddPersonPage(Model model) {
+
+        Acronym acronym = new Acronym();
+        model.addAttribute("acronym", acronym);
+
+        return "acronymAdd";
+    }
+
 }
+
 
 

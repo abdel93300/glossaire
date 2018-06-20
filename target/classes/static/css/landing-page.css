@@ -134,7 +134,15 @@ font-size:18px;
 .divmenu {
 padding-top: 35px;
 display:inline-block;
-height:50px;
+height:30px;
 margin-bottom:25px;
 font-size:20px;
 }
+#part1 {
+height:20%;}
+
+#part2 {
+height:65%;}
+
+#part3 {
+height:15%;}
