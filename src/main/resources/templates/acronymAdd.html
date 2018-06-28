@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Custom styles for this template -->
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
     <link href="css/landing-page.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen"/>
     <style>
@@ -14,7 +15,7 @@
     </style>
 </head>
 <div class="row" id="part1" style="height: 120px;background-color:#EBEBDC;">
-    <img src="img/dico.png" alt="Dico photo" style="height: 80px; left: 20px; position: absolute; top: 15px; width: 80px;"/>
+    <a th:href="@{/index}"><img src="img/dico.png" alt="Dico photo" style="height: 80px; left: 20px; position: absolute; top: 15px; width: 80px;"/></a>
     <div style="position:absolute; left:100px; top:45px; height:45px; background-color:#EBEBDC; font-family:'Arial Gras Italique', 'Arial';
                 font-weight:700; font-style:italic; font-size:22px; text-decoration:none; color:#FF6633; text-align:left;
                 border-color:transparent; outline-style:none;">DicoDsi
@@ -30,13 +31,7 @@
     </div>
     <body>
 
-    <style>
-div.of1 {
-height: 50%;
-width: 100%;
-overflow-y: auto;
-}
-</style>
+
     <<div class="container">
         <br>
         <br>
@@ -48,19 +43,18 @@ overflow-y: auto;
         <h2>Création acronyme</h2>
         <div>
 
-            <form th:action="@{/acronymAdd}"
-                  th:object="${acronym}" method="POST">
+            <form  th:action="@{/acronymAdd}"  th:object="${acronym}" method="POST">
+                <!--<input th:type="hidden" name="id" th:field="${acronymForm.acronymId}" />-->
                 <div class="form-group">
-
-                        <label for="formControlInput0">acronyme </label>
-                        <input id="formControlInput0" type="text" th:field="*{name}" />
+                        <label for="formControlInput0">acronyme (*) </label>
+                        <input type="text" th:field="*{name}" id="formControlInput0" required />
 
                 </div>
                 <br>
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Définition courte </label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"  th:field="*{description.shortD}" />
+                    <label for="exampleFormControlInput1">Définition courte (*)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"  th:field="*{description.shortD}" required />
                 </div>
                 <br>
 
@@ -71,13 +65,13 @@ overflow-y: auto;
                 <br/>
                 <div class="row">
                     <div class="col-3">
-                        <input type="text" class="form-control" placeholder="mot clé 1" />
+                        <input type="text" class="form-control" placeholder="mot clé 1" th:field="*{keyword1}"  />
                     </div>
                     <div class="col-3">
-                        <input type="text" class="form-control" placeholder="mot clé 2" />
+                        <input type="text" class="form-control" placeholder="mot clé 2" th:field="*{keyword2}"  />
                     </div>
                     <div class="col-3">
-                        <input type="text" class="form-control" placeholder="mot clé 3">
+                        <input type="text" class="form-control" placeholder="mot clé 3" th:field="*{keyword3}" >
                     </div>
                 </div>
                 <br>

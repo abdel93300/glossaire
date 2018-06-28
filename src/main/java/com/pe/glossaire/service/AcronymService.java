@@ -23,7 +23,7 @@ public class AcronymService {
 
     public void create(Acronym acronym){
 
-        repository.save(new Acronym());
+        repository.save(acronym);
     }
 }
 

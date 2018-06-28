@@ -11,4 +11,5 @@ import java.util.List;
 public interface AcronymRepository extends CrudRepository<Acronym, Long> {
 
     List<Acronym> findByName(String name);
+
 }

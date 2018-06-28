@@ -5,74 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Custom styles for this template -->
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
     <link href="css/landing-page.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen"/>
     <style>
         .navigation-order{
             margin-bottom: 30px;
-        }
+               }
     </style>
 </head>
 <!--suppress Annotator -->
 <body>
 
-<style>
-div.of1 {
-height: 50%;
-width: 100%;
-overflow-y: auto;
-}
-</style>
 <div class="row" style="height: 120px;background-color:#EBEBDC;">
     <img src="img/dico.png" alt="Dico photo" style="height: 80px; left: 20px; position: absolute; top: 15px; width: 80px;"/>
     <div style="position:absolute; left:100px; top:45px; height:45px; background-color:#EBEBDC; font-family:'Arial Gras Italique', 'Arial';
                 font-weight:700; font-style:italic; font-size:22px; text-decoration:none; color:#FF6633; text-align:left;
                 border-color:transparent; outline-style:none;">DicoDsi
     </div>
-    <span class="spanmenu">&nbsp;&nbsp;</span>
+    <!--<span class="spanmenu">Recherche alphabétique  :&nbsp;&nbsp;</span>-->
     <div  class="divmenu">
-        <input type="text" style="width:380px; margin-left:16px;font-size:16px;" />
+    <!--    <input type="text" style="width:380px; margin-left:16px;font-size:16px;" />
         <button type="submit" id="btn_search">
-            <img src="img/search.png" alt="Search Logo"></button>
+            <img src="img/search.png" alt="Search Logo"></button>-->
 
         <img src="img/logo_pe.png" alt="logo_pe photo" style="height: 80px;right: 20px;justify-content:right;position: absolute; top: 15px; width: 80px;" />
 
-    </div>
-    <div class="row" style="height:30px;">
+
+<!--    <div class="row" style="height:30px;">
         <label style="background-color:#EBEBDC;margin-left:360px;font-size:18px;">Mots clé :&nbsp</label>
         <input type="text" id="motcle1" aria-label="mot clé 1"/>&nbsp;
         <input type="text" id="motcle2" />&nbsp;
         <input type="text" id="motcle3" />
-    </div>
-</div>
+    </div>-->
+
 <div class="container">
 
 
     <div class="row">
-        <div class="col-lg-12 col-md-8 col-sm-4">
-            <br>
-            <br>
-            <h6>12 terme peuvent correspondre à votre recherche</h6>
+        <br>
+        <br>
+        <br>
+        <br>
 
-            <div class="of1">
-                <table class="table table-striped table-hover">
+        <div class="col-lg-12 col-md-8 col-sm-4 " align="left" style="margin-top:10px;margin-left:100px; font-size: 14px;">
+            <h6>12 terme peuvent correspondre à votre recherche</h6>
+            <br>
+            <div class="of2">
+
+                <ul>
+                    <th:block th:each="acronym : ${acronyms}">
+                        <li style=" font-weight: bold;" th:text ="${acronym.name}"</li>
+                        <li><a  class="ex2" style="color:#FF6633;A;" th:href="@{/acronymAdd}"  th:text="${acronym.description.shortD}"></a></li>
+                        <li th:text="${acronym.description.longD}"></li>
+                       <li th:text="|créé le  ${#dates.format(acronym.creation,'dd/MM/YYYY')}
+                         par   ${acronym.author}|"></li>
+                        <br>
+                    </th:block>
+                </ul>
+                <!--<table class="table table-striped table-hover">
                    <tbody>
 
                     <tr th:each="acronym : ${acronyms}">
                         <td th:text="${acronym.name}"></td>
                         <td th:text="${acronym.description.shortD}"></td>
                         <td th:text="${acronym.description.longD}"></td>
-                        <td th:text="${acronym.creation}"></td>
+                        <td th:text="${#dates.format(acronym.creation,'dd/MM/YYYY')}"></td>
                         <td th:text="${acronym.author}"></td>
                     </tr>
                     </tbody>
-                </table>
+                </table>-->
             </div>
-            <br>
             <br>
             <div class="row navigation-order" align="center">
                 <div class="col-lg-12 col-md-8 col-sm-4">
-                    <a  th:href="@{/acronymAdd}">Test création acronyme</a>
+                    <a  class="ex2" style="color:#E66E0A;text-decoration:underline" th:href="@{/acronymAdd}">Vous ne trouvez pas la définition recherchée, La créer ?</a>
                 </div>
             </div>
         </div>
@@ -82,7 +89,7 @@ overflow-y: auto;
 
 <footer  style="height:80px;background-color:#EBEBDC;  position: absolute;
   bottom: 0;
-  width: 100%;" >
+  width: 100%;margin-left:15px;" >
     <div class="float-lg-left" th:text="${nombre} + ' termes à la  date du 16/06/2018'">
     </div>
     <div class="container">

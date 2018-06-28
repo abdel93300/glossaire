@@ -2,6 +2,7 @@ package com.pe.glossaire.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "description")
@@ -10,6 +11,7 @@ public class Description {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long descriptionId;
 
+    @NotNull
     public  String  shortD;
 
     public  String  longD;
@@ -18,7 +20,7 @@ public class Description {
 
     }
 
-    public Description(Long descriptionId,String shortD, String longD) {
+    public Description(String shortD, String longD) {
         this.shortD = shortD;
         this.longD = longD;
     }
@@ -45,5 +47,14 @@ public class Description {
 
     public void setLongD(String longD) {
         this.longD = longD;
+    }
+
+    @Override
+    public String toString() {
+        return "Description{" +
+                "descriptionId=" + descriptionId +
+                ", shortD='" + shortD + '\'' +
+                ", longD='" + longD + '\'' +
+                '}';
     }
 }

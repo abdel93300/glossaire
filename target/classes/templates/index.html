@@ -6,7 +6,9 @@
     <title>Glossaire PE</title>
 
     <!-- Custom styles for this template -->
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
     <link href="css/landing-page.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
@@ -18,31 +20,42 @@
                 font-weight:700; font-style:italic; font-size:22px; text-decoration:none; color:#FF6633; text-align:left;
                 border-color:transparent; outline-style:none;">DicoDsi
     </div>
-    <span class="spanmenu">Recherche alphabétique  &nbsp;&nbsp;&nbsp;</span>
+    <!--<span class="spanmenu">Recherche alphabétique  &nbsp;&nbsp;&nbsp;</span>-->
     <div  class="divmenu">
-        <input type="text" style="width:380px; margin-left:16px;font-size:16px;" placeholder="Entrez l'acronyme ou les 1ères lettres (3 au max.)" />
-        <button type="submit" id="btn_search">
-            <img src="img/search.png" alt="Search Logo"></button>
+        <!--<input type="text" style="width:380px; margin-left:16px;font-size:16px;" placeholder="Entrez l'acronyme ou les 1ères lettres (3 au max.)" />-->
+        <!--<button type="submit" id="btn_search">-->
+            <!--<img src="img/search.png" alt="Search Logo"></button>-->
 
         <img src="img/logo_pe.png" alt="logo_pe photo" style="height: 80px;right: 20px;justify-content:right;position: absolute; top: 15px; width: 80px;" />
 
     </div>
-    <div class="row" style="height:30px;">
-        <label style="background-color:#EBEBDC;margin-left:360px;font-size:18px;">Mots clé :&nbsp</label>
-        <input type="text" id="motcle1" aria-label="mot clé 1"/>&nbsp;
-        <input type="text" id="motcle2" />&nbsp;
-        <input type="text" id="motcle3" />
-    </div>
+    <!--<div class="row text-center" style="height:30px;">-->
+        <!--<label style="background-color:#EBEBDC;margin-left:360px;font-size:18px;">Mots clé :&nbsp</label>-->
+        <!--<input type="text" id="motcle1" aria-label="mot clé 1"/>&nbsp;-->
+        <!--<input type="text" id="motcle2" />&nbsp;-->
+        <!--<input type="text" id="motcle3" />-->
+    <!--</div>-->
 </div>
 
-
-
+<style>
+    .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!-- Masthead -->
 <header align="center" >
-    <div class="container">
-        <div class="row">
-            <div style="font-size:20px;">
+    <div class="col-lg-12 col-md-8 col-sm-4">
+    <div class="container" align="center">
+        <div class="row text-center vertical-align vcenter">
+            <div style="font-size:20px;text-align:center;color:#808000;">
                 <h5> Bienvenue sur le dictionnaire partagé de la DSI</h5>
                 <h5>Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe</h5>
                 <h5> pour obtenir sa définition.</h5>
@@ -56,14 +69,16 @@
             </div>
         </div>
     </div>
-
-
-    <div class="row navigation-order">
+    </div>
+    <br>
+    <br>
+    <div class="row navigation-order" align="center">
         <div class="col-lg-12 col-md-8 col-sm-4">
-            <a href="/acronyms">Test affichage liste acronymes</a>
+            <a  class="ex2" href="/acronyms"><h3>Liste des acronymes</h3></a>
         </div>
     </div>
-
+<br>
+<br>
 </header>
 
 
@@ -72,25 +87,27 @@
 </style>
 
 
-<footer  style="height:80px;background-color:#EBEBDC;" >
-    <div class="float-lg-left" th:text="${nombre} + ' termes à la  date du 12/06/2018'">
+<footer  style="height:80px;background-color:#EBEBDC;  position: absolute;
+  bottom: 0;
+  width: 100%;" >
+    <div class="float-lg-left" th:text="${nombre} + ' termes à la  date du 16/06/2018'">
     </div>
-    <div class="container" align="right">
-        <div class="row" >
-            <div class="col-lg-12 col-md-8 col-sm-4 h-40 text-lg-right float-lg-right d-inline-flex">
-                <ul class="nav list-inline mb-2 " style="list-style-type:none;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 h-40 text-lg-right">
+                <ul class="list-inline mb-2">
                     <li  class="list-inline-item">
                         <a  class="ex2" style="color:#E66E0A;" href="#">A propos</a>
                     </li>
-                    <li class="list-inline-item ">
+                    <li class="list-inline-item">
                         <a  class="ex2" style="color:#E66E0A;" href="#">Contacter l'administrateur</a>
                     </li>
                 </ul>
-             </div>
+            </div>
         </div>
     </div>
 </footer>
-
 </body>
 
 </html>
