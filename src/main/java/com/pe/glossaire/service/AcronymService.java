@@ -5,7 +5,7 @@ import com.pe.glossaire.repository.AcronymRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AcronymService {
@@ -24,6 +24,10 @@ public class AcronymService {
     public void create(Acronym acronym){
 
         repository.save(acronym);
+    }
+
+    public Optional<Acronym> findById(Long idAcronym) {
+        return repository.findById(idAcronym);
     }
 }
 

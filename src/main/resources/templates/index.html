@@ -14,7 +14,7 @@
 <body>
 
 <!-- Navigation -->
-<div class="row" style="height: 120px;background-color:#EBEBDC;">
+<div class="row1">
     <img src="img/dico.png" alt="Dico photo" style="height: 80px; left: 20px; position: absolute; top: 15px; width: 80px;"/>
     <div style="position:absolute; left:100px; top:45px; height:45px; background-color:#EBEBDC; font-family:'Arial Gras Italique', 'Arial';
                 font-weight:700; font-style:italic; font-size:22px; text-decoration:none; color:#FF6633; text-align:left;
@@ -90,7 +90,7 @@
 <footer  style="height:80px;background-color:#EBEBDC;  position: absolute;
   bottom: 0;
   width: 100%;" >
-    <div class="float-lg-left" th:text="${nombre} + ' termes à la  date du 16/06/2018'">
+    <div class="float-lg-left" th:text="|${nombre}  termes à la  date du ${dateJour}|">
     </div>
     <div class="container">
         <div class="row">
@@ -101,7 +101,7 @@
                         <a  class="ex2" style="color:#E66E0A;" href="#">A propos</a>
                     </li>
                     <li class="list-inline-item">
-                        <a  class="ex2" style="color:#E66E0A;" href="#">Contacter l'administrateur</a>
+                        <a  class="ex2" style="color:#E66E0A;" href="mailto:sicommunication.00317@pole-emploi.fr">Contacter l'administrateur</a>
                     </li>
                 </ul>
             </div>

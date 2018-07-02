@@ -24,12 +24,12 @@ public class Acronym {
     public Description description;
     public Date creation;
     public String author;
-    public String author_id;
-    public boolean obsolete;
-    public boolean a_supprimer;
-    public String keyword1;
-    public String keyword2;
-    public String keyword3;
+    private String author_id;
+    private boolean obsolete;
+    private boolean a_supprimer;
+    private String keyword1;
+    private String keyword2;
+    private String keyword3;
 
 
     public Acronym(){

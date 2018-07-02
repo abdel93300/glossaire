@@ -48,7 +48,7 @@ table {
 }
 div.of1 {
  height: 450px;
- width : 100%;
+ width : 80%;
  overflow-y: auto;
  }
 
@@ -61,3 +61,24 @@ div.of2 {
  a.ex2:hover, a.ex2:active {font-size: 110%;
  font-weight:bold;
  text-decoration:underline}
+
+ .row1 {
+ height:120px;
+ background-color:#EBEBDC;
+ }
+
+  .row2 {
+  height: 120%;
+ width : 60%;
+
+  }
+
+    .row3 {
+    height:120px;
+   background-color:#EBEBDC;
+    position: absolute;
+     bottom: 0;
+    width: 100%;
+
+
+    }

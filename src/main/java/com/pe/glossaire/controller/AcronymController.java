@@ -1,9 +1,10 @@
 package com.pe.glossaire.controller;
 
 
+import com.google.common.collect.Lists;
 import com.pe.glossaire.model.Acronym;
-import com.pe.glossaire.model.AcronymForm;
 import com.pe.glossaire.model.Description;
+import com.pe.glossaire.repository.AcronymRepository;
 import com.pe.glossaire.service.AcronymService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,11 +12,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+
 import javax.validation.Valid;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
 
 @Controller
 public class AcronymController {
@@ -26,13 +30,26 @@ public class AcronymController {
     @Autowired
     private AcronymService acronymService;
 
+    @Autowired
+    private AcronymRepository acronymRepository;
 
     @GetMapping("/acronyms")
-    public String acronym(Integer nombre, Model model) {
+    public String acronym(Long nombre, Model model, String dateJour) {
 
         Iterable<Acronym> acronyms = acronymService.retrieve();
-        model.addAttribute("acronyms", acronyms);
-        model.addAttribute("nombre", "100");
+        List<Acronym> acronymsL = Lists.newArrayList(acronyms);
+
+        acronymsL.sort(Comparator.comparing(Acronym::getName));
+
+        nombre=acronyms.spliterator().getExactSizeIfKnown();
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+        LocalDate localDate = LocalDate.now();
+        dateJour=dtf.format(localDate);
+
+        model.addAttribute("dateJour", dateJour);
+        model.addAttribute("acronyms", acronymsL);
+        model.addAttribute("nombre", nombre);
         return "acronyms";
     }
     @GetMapping("/acronyms/{name}")
@@ -82,6 +99,14 @@ public class AcronymController {
         return "acronymAdd";
     }
 
+    @GetMapping("/acronymEdit")
+    public String editAcronymPage(Model model, @RequestParam(value = "idAcronym") Long idAcronym) {
+
+        Optional<Acronym> acronym = acronymService.findById(idAcronym);
+
+        model.addAttribute("acronym", acronym);
+        return "acronymEdit";
+    }
 
 }
 
