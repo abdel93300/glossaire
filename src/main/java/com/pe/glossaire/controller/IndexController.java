@@ -33,4 +33,17 @@ public class IndexController {
         return "index";
     }
 
+    @RequestMapping("/indexsav")
+    public String indexsav(Long nombre, Model model, String dateJour){
+        Iterable<Acronym> acronyms = acronymService.retrieve();
+        nombre=acronyms.spliterator().getExactSizeIfKnown();
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+        LocalDate localDate = LocalDate.now();
+        dateJour=dtf.format(localDate);
+        model.addAttribute("dateJour", dateJour);
+        model.addAttribute("nombre", nombre);
+        return "indexsav";
+    }
+
 }

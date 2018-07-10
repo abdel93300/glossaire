@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,8 +50,9 @@ table {
 }
 div.of1 {
  height: 450px;
- width : 80%;
+ width : 70%;
  overflow-y: auto;
+ overflow-x: auto;
  }
 
 div.of2 {
@@ -63,12 +66,13 @@ div.of2 {
  text-decoration:underline}
 
  .row1 {
- height:120px;
+ height:100px;
  background-color:#EBEBDC;
  }
 
   .row2 {
-  height: 120%;
+
+ height: 100%;
  width : 60%;
 
   }
@@ -79,6 +83,11 @@ div.of2 {
     position: absolute;
      bottom: 0;
     width: 100%;
-
-
     }
+
+   a.ex2:hover, a.ex2:active {
+  font-size: 110%;
+  }
+
+
+

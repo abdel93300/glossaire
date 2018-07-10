@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glossaire PE</title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
+    <link href="css/landing-page.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<section  id="header" class="header">
+    <a th:href="@{/index}"><img src="img/dico.png" alt="Dico photo" style="height: 80px; left: 20px; top: 15px; width: 80px;"/></a>
+
+    <span style="position:absolute; left:100px; top:45px; height:45px; background-color:#EBEBDC; font-family:'Arial Gras Italique', 'Arial';
+                font-weight:700; font-style:italic; font-size:22px; text-decoration:none; color:#FF6633; text-align:left;
+                border-color:transparent; outline-style:none;">DicoDsi
+    </span>>
+    <div class="header-right">
+        <img src="img/logo_pe.png" alt="logo_pe photo" style="height: 80px;right: 20px;justify-content:right;position: absolute; top: 15px; width: 90px;" />
+    </div>
+</section>
+
+<section id="main-content">
+    <div class="clearfix">
+        <div class="container">
+            <div class="row">
+                 <div class="col-lg-12" align="center" style="color:#808000;padding-top:40px;">
+                    <h5> Bienvenue sur le dictionnaire partagé de la DSI</h5>
+                    <h5 style="margin-bottom: 0px;">Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe</h5>
+                    <h5> pour obtenir sa définition.</h5>
+                    <h5 style="margin-bottom: 0px;"> Si le terme recherché n'éxiste pas dans le Dico,</h5>
+                    <h5 style="margin-bottom: 0px;">n'hésitez pas à créer lorsque vous aurez les différents éléments</h5>
+                    <h5>nécessaires à sa création (libellé en clair et sa définition)</h5>
+                    <h5 style="margin-bottom: 0px;"> Si la définition proposée vous semble erronée,</h5>
+                    <h5> vous avez la possibilité de la corriger.</h5>
+                    <h5> Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.</h5>
+                    <h5> Bonne navigation. </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row navigation-order" align="center">
+            <div class="col-lg-12">
+                <a  class="ex2" href="/acronyms"><h3>Liste des acronymes</h3></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div style="height:80px;background-color:#EBEBDC;  position: relative;
+         bottom: 0;
+         width: 100%; margin:160px 0px 0px 0px;">
+        <div class="float-lg-left"  style="color:#E66E0A;" th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-lg-right">
+                        <ul class="list-inline">
+                            <li  class="list-inline-item">
+                                <a  class="ex2" style="color:#E66E0A;" href="#">A propos</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a  class="ex2" style="color:#E66E0A;" href="href=mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .header, .footer {
+background-color:#EBEBDC;
+color:#E66E0A;
+}
+
+.column {
+float: left;
+padding: 15px;
+}
+
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.menu {
+width: 25%;
+}
+
+.content {
+width: 75%;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+overflow: hidden;
+height:100px;
+background-color:#EBEBDC;"
+}
+/* Style the header links */
+.header a {
+float: left;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+font-size: 25px;
+font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+background-color: #ddd;
+color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+background-color: dodgerblue;
+color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+.header a {
+float: none;
+display: block;
+text-align: left;
+}
+.header-right {
+float: none;
+}
+}
+* {
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color:#EBEBDC;
+    color: white;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
