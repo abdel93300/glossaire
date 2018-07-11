@@ -1,9 +1,0 @@
-com\pe\glossaire\model\AcronymForm.class
-com\pe\glossaire\model\Description.class
-com\pe\glossaire\model\User.class
-com\pe\glossaire\service\AcronymService.class
-com\pe\glossaire\repository\AcronymRepository.class
-com\pe\glossaire\model\Acronym.class
-com\pe\glossaire\controller\IndexController.class
-com\pe\glossaire\controller\AcronymController.class
-com\pe\glossaire\Application.class

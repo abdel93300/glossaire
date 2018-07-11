@@ -62,8 +62,9 @@ div.of2 {
  overflow-y: auto;
  }
  a.ex2:hover, a.ex2:active {font-size: 110%;
- font-weight:bold;
- text-decoration:underline}
+    font-weight:bold;
+    text-decoration:underline;
+ color:#E66E0A;}
 
  .row1 {
  height:100px;

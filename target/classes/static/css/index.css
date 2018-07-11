@@ -1,0 +1,349 @@
+/*.topbar {
+    display: flex;
+    background-color:#EBEBDC;
+}
+
+
+.footbar {
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    height:80px;
+    background-color:#EBEBDC;
+}
+#logo_dico {
+    height:80px;
+    width:80px;
+}
+
+#logo_pe {
+    height:80px;
+    width:90px;
+}
+
+#dicodsi {
+    color:#FF6633;
+    font-style:italic;
+    font-size:22px;
+    font-weight:600;
+    vertical-center:middle;
+}
+.vcenter {
+margin-top:100px;
+vertical-center:middle;
+font-size:14px;
+margin-bottom:100px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+   .content {
+            font-size:1.5rem;
+            }
+ a.ex2 {
+   color:#E66E0A;
+ }
+ a.ex2:hover, a.ex2:active {
+    font-size: 110%;
+    font-weight:bold;
+    text-decoration:underline;
+    color:#E66E0A;
+ }*/
+
+@media (max-width: 576px)  {
+    #logo_dico {
+        height:30px;
+        width:30px;
+    }
+    #logo_pe {
+       height:30px;
+       width:40px;
+        }
+       #dicodsi {
+          color: #FF6633;
+          font-style: italic;
+          font-size: 10px;
+          font-weight: 600;
+          vertical-align: top;
+         }
+    .vcenter {
+       margin-top:25px;
+       vertical-center:middle;
+       font-size:12px;
+       margin-bottom:25px;
+    }
+     a.ex2,.nbleft {
+        color:#E66E0A;
+     }
+     .lstacro {
+        font-size:1.5rem;
+     }
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    .topbar {
+    display: flex;
+    background-color:#EBEBDC;
+}
+
+ #logo_dico {
+        height:70px;
+        width:70px;
+    }
+
+    #dicodsi {
+        color:#FF6633;
+        font-style:italic;
+        font-size:22px;
+        font-weight:600;
+        vertical-center:middle;
+    }
+    #logo_pe {
+            height:80px;
+            width:80px;
+        }
+        .vcenter {
+        margin-top:20px;
+        font-size:10px;
+        margin-bottom:2px;
+
+        }
+        .footbar {
+            width:100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            height:80px;
+            background-color:#EBEBDC;
+        }
+        .content {
+            margin-top:5rem;
+                 font-size:1.5rem;
+                 margin-bottom:5rem;
+                 }
+            a.ex2,.nbleft {
+                color:#E66E0A;
+                 font-size:1.5rem;
+             }
+             .lstacro {
+                font-size:2.5rem;
+             }
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+
+/*
+  ##Device = Tablets, Ipads  et Ipad Pro (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #logo_dico {
+         height:30px;
+         width:30px;
+     }
+     #logo_pe {
+             height:30px;
+             width:40px;
+         }
+         .vcenter {
+         margin-top:50px;
+         font-size:12px;
+         margin-bottom:50px;
+
+         }
+         .footbar {
+             width:100%;
+             position: absolute;
+             left: 0;
+             bottom: 0;
+             display: flex;
+             height:80px;
+             background-color:#EBEBDC;
+         }
+         .content {
+            font-size:2rem;
+            }
+    a.ex2,.nbleft {
+           color:#E66E0A;
+           font-size:1.5rem;
+       }
+         .lstacro {
+                font-size:2rem;
+                }
+}
+
+/*
+  ##Device = Tablets, Ipads  (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .topbar {
+        height:40px;
+    }
+  #logo_dico {
+        height:30px;
+        width:30px;
+    }
+    #dicodsi {
+        color: #FF6633;
+        font-style: italic;
+        font-size: 10px;
+        font-weight: 600;
+        vertical-align: top;
+    }
+    #logo_pe {
+            height:30px;
+            width:40px;
+    }
+    .vcenter {
+        margin-top:25px;
+        vertical-center:middle;
+        font-size:12px;
+        margin-bottom:25px;
+    }
+       .content {
+                font-size:0.75rem;
+                }
+         a.ex2,.nbleft {
+           color:#E66E0A;
+              font-size:1rem;
+       }
+     .footbar {
+        height:40px;
+   }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .topbar, .footbar {
+        height:40px;
+    }
+  #logo_dico {
+        height:30px;
+        width:30px;
+    }
+    #dicodsi {
+        color:#FF6633;
+        font-style:italic;
+        font-size:12px;
+        font-weight:300;
+        vertical-align:top;
+    }
+    #logo_pe {
+            height:30px;
+            width:40px;
+        }
+        .vcenter {
+        margin-top:25px;
+        vertical-center:middle;
+        font-size:12px;
+        margin-bottom:25px;
+        }
+    a.ex2,.nbleft {
+        color:#E66E0A;
+        }
+           .lstacro {
+           font-size:1.5rem;
+           }
+         .content {
+                       font-size:0.7rem;
+                       }
+ }
+@media (min-width: 320px) and (max-width: 480px) {
+    .topbar {
+         height:40px;
+    }
+
+   #logo_dico {
+          height:30px;
+          width:30px;
+    }
+    #dicodsi {
+        color:#FF6633;
+        font-style:italic;
+        font-size:12px;
+        font-weight:300;
+        vertical-align:top;
+    }
+    #logo_pe {
+           height:30px;
+           width:40px;
+    }
+    .vcenter {
+          margin-top:50px;
+          vertical-center:middle;
+          font-size:0.75rem;
+          margin-bottom:0px;
+    }
+     a.ex2,.nbleft {
+       color:#E66E0A;
+   }
+   .lstacro {
+   font-size:1.5rem;
+   }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape){
+    .topbar {
+         height:40px;
+    }
+
+   #logo_dico {
+          height:30px;
+          width:30px;
+    }
+    #dicodsi {
+        color:#FF6633;
+        font-style:italic;
+        font-size:12px;
+        font-weight:300;
+        vertical-align:top;
+    }
+    #logo_pe {
+           height:30px;
+           width:40px;
+    }
+    .vcenter {
+          margin-top:0;
+          vertical-center:middle;
+          font-size:10px;
+          margin-bottom:0;
+    }
+     a.ex2,.nbleft {
+       color:#E66E0A;
+   }
+   .lstacro {
+   font-size:1.5rem;
+   }
+}
