@@ -1,15 +1,16 @@
-/*.topbar {
+/*
+.topbar {
     display: flex;
     background-color:#EBEBDC;
 }
-
+*/
 
 .footbar {
     width:100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    display: flex;
+    display: inline-block;
     height:80px;
     background-color:#EBEBDC;
 }
@@ -23,17 +24,18 @@
     width:90px;
 }
 
-#dicodsi {
+.dicodsi {
     color:#FF6633;
     font-style:italic;
-    font-size:22px;
+    font-size:20px;
     font-weight:600;
-    vertical-center:middle;
+    padding-top:30px;
+
 }
 .vcenter {
 margin-top:100px;
 vertical-center:middle;
-font-size:14px;
+font-size:24px;
 margin-bottom:100px;
 }
 .container {
@@ -41,10 +43,11 @@ margin-bottom:100px;
     align-items: center;
     justify-content: center;
 }
-
-   .content {
-            font-size:1.5rem;
-            }
+        .content {
+             margin-top:7.5rem;
+             font-size:1.25rem;
+             margin-bottom:7.5px;
+           }
  a.ex2 {
    color:#E66E0A;
  }
@@ -53,7 +56,60 @@ margin-bottom:100px;
     font-weight:bold;
     text-decoration:underline;
     color:#E66E0A;
- }*/
+ }
+
+ .ul1 {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color:#EBEBDC;
+ }
+
+ .li1 {
+     float: left;
+ }
+ .float_right {
+     float:right;
+     padding-right:10px;
+ }
+
+
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*//*
+
+
+@media (min-width: 1281px) {
+
+
+        .vcenter {
+        margin-top:20px;
+        font-size:10px;
+        margin-bottom:2px;
+        }
+        .footbar {
+            width:100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            height:80px;
+            background-color:#EBEBDC;
+        }
+
+}
+
+
+*/
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*//*
+
+
 
 @media (max-width: 576px)  {
     #logo_dico {
@@ -85,74 +141,16 @@ margin-bottom:100px;
      }
 }
 
-/*
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
+
+
 */
-
-@media (min-width: 1281px) {
-
-    .topbar {
-    display: flex;
-    background-color:#EBEBDC;
-}
-
- #logo_dico {
-        height:70px;
-        width:70px;
-    }
-
-    #dicodsi {
-        color:#FF6633;
-        font-style:italic;
-        font-size:22px;
-        font-weight:600;
-        vertical-center:middle;
-    }
-    #logo_pe {
-            height:80px;
-            width:80px;
-        }
-        .vcenter {
-        margin-top:20px;
-        font-size:10px;
-        margin-bottom:2px;
-
-        }
-        .footbar {
-            width:100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            display: flex;
-            height:80px;
-            background-color:#EBEBDC;
-        }
-        .content {
-            margin-top:5rem;
-                 font-size:1.5rem;
-                 margin-bottom:5rem;
-                 }
-            a.ex2,.nbleft {
-                color:#E66E0A;
-                 font-size:1.5rem;
-             }
-             .lstacro {
-                font-size:2.5rem;
-             }
-
-}
-
-/*
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-
 /*
   ##Device = Tablets, Ipads  et Ipad Pro (portrait)
   ##Screen = B/w 768px to 1024px
+*//*
 */
+/*
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -191,10 +189,16 @@ margin-bottom:100px;
                 }
 }
 
+*//*
+
+*/
 /*
   ##Device = Tablets, Ipads  (landscape)
   ##Screen = B/w 768px to 1024px
+*//*
 */
+/*
+
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
@@ -234,10 +238,16 @@ margin-bottom:100px;
    }
 }
 
+*//*
+
+*/
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
+*//*
 */
+/*
+
 
 @media (min-width: 481px) and (max-width: 767px) {
 
@@ -309,10 +319,16 @@ margin-bottom:100px;
    }
 }
 
+*//*
+
+*/
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
+*//*
 */
+/*
+
 
 @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape){
     .topbar {
@@ -346,4 +362,6 @@ margin-bottom:100px;
    .lstacro {
    font-size:1.5rem;
    }
+*//*
+
 }

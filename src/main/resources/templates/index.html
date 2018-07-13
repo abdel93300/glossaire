@@ -10,39 +10,39 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="topbar">
-        <div class="p-2"><img id="logo_dico" src="img/dico.png" alt="Dico photo"/></div>
-        <div class="p-4"><span id="dicodsi">DicoDSI</span></div>
-        <div class="ml-auto p-2"><img id="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"></div>
+    <ul class="ul1">
+        <li class="li1"><img class="logo_dico" id="logo_dico" src="img/dico.png" alt="Dico photo"/></li>
+        <li class="li1"><label class="dicodsi">DicoDsi</label></li>
+        <li class="float_right"><img id="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"/></li>
+    </ul>
+
+
+    <div class="text-center vcenter">
+        <p class="content">
+            Bienvenue sur le dictionnaire partagé de la DSI<br>
+            Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe<br>
+            pour obtenir sa définition.<br>
+            Si le terme recherché n'éxiste pas dans le Dico,<br>
+            n'hésitez pas à créer lorsque vous aurez les différents éléments<br>
+            nécessaires à sa création (libellé en clair et sa définition)<br>
+            Si la définition proposée vous semble erronée,<br>
+            vous avez la possibilité de la corriger.<br>
+            Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.<br>
+            Bonne navigation.
+        </p>
     </div>
-
-
-
-
-                <div class="text-center vcenter">
-                   <p class="content">
-                       Bienvenue sur le dictionnaire partagé de la DSI<br>
-                       Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe<br>
-                       pour obtenir sa définition.<br>
-                       Si le terme recherché n'éxiste pas dans le Dico,<br>
-                       n'hésitez pas à créer lorsque vous aurez les différents éléments<br>
-                       nécessaires à sa création (libellé en clair et sa définition)<br>
-                       Si la définition proposée vous semble erronée,<br>
-                       vous avez la possibilité de la corriger.<br>
-                       Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.<br>
-                       Bonne navigation.
-                    </p>
-                </div>
 
 
 
     <div align="center">
-                <a  class="ex2" href="/acronyms"><h3 class="lstacro">Liste des acronymes</h3></a>
+                <a  class="ex2" href="/acronyms"><h3>Liste des acronymes</h3></a>
     </div>
+
     <div class="footbar">
-        <div class="mr-auto p-2"> <div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></div>
-        <div class="p-2"><a  class="ex2" href="#">A propos</a></div>
-        <div class="p-2"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></div>
+    <ul class="ul1">
+        <li><div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></li>
+        <li class="float-lg-right float_right"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></li>
+    </ul>
     </div>
 </body>
 </html>

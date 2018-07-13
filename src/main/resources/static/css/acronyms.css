@@ -1,9 +1,3 @@
-/*
-.topbar {
-    display: flex;
-    background-color:#EBEBDC;
-}
-*/
 
 .footbar {
     width:100%;
@@ -58,6 +52,24 @@ margin-bottom:100px;
     color:#E66E0A;
  }
 
+ .float_right {
+     float:right;
+     padding-right:10px;
+ }
+
+div.of1 {
+ height: 450px;
+ width : 70%;
+ overflow-y: auto;
+ overflow-x: auto;
+ }
+
+div.of2 {
+ height: 400px;
+ width : 120%;
+ margin-left:10px;
+ overflow-y: auto;
+ }
  .ul1 {
      list-style-type: none;
      margin: 0;
@@ -69,12 +81,16 @@ margin-bottom:100px;
  .li1 {
      float: left;
  }
+
+  .ul2 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
  .float_right {
      float:right;
      padding-right:10px;
  }
-
-
 
 /*
   ##Device = Desktops
