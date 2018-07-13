@@ -2,20 +2,24 @@ package com.pe.glossaire.controller;
 
 import com.pe.glossaire.model.Acronym;
 import com.pe.glossaire.service.AcronymService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Controller
-
-
-
 public class IndexController {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Value("${contact.mailto}")
+    private String mailto;
 
     @Autowired
     private AcronymService acronymService;
@@ -30,6 +34,7 @@ public class IndexController {
         dateJour=dtf.format(localDate);
         model.addAttribute("dateJour", dateJour);
         model.addAttribute("nombre", nombre);
+        model.addAttribute("mailto", mailto);
         return "index";
     }
 

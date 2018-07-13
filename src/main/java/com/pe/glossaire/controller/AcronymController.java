@@ -6,6 +6,8 @@ import com.pe.glossaire.model.Acronym;
 import com.pe.glossaire.model.Description;
 import com.pe.glossaire.repository.AcronymRepository;
 import com.pe.glossaire.service.AcronymService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,11 @@ import java.util.Optional;
 
 @Controller
 public class AcronymController {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Value("${contact.mailto}")
+    private String mailto;
 
     @Value("${error.message}")
     private String errorMessage;
@@ -50,6 +57,7 @@ public class AcronymController {
         model.addAttribute("dateJour", dateJour);
         model.addAttribute("acronyms", acronymsL);
         model.addAttribute("nombre", nombre);
+        model.addAttribute("mailto", mailto);
         return "acronyms";
     }
     @GetMapping("/acronyms/{name}")
