@@ -56,6 +56,7 @@ public class AcronymController {
     public String searchAcronyms(Integer nombre, Model model) {
         Iterable<Acronym> acronyms = acronymService.retrieveByName("name");
         model.addAttribute("acronyms", acronyms);
+        model.addAttribute("nombre", "100");
         return "acronyms";
     }
 
@@ -69,14 +70,15 @@ public class AcronymController {
 
         nombre=acronyms.spliterator().getExactSizeIfKnown();
 
+        Acronym acronym = new Acronym();
+
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/YYYY");
         LocalDate localDate = LocalDate.now();
         dateJour=dtf.format(localDate);
 
         model.addAttribute("dateJour", dateJour);
-        model.addAttribute("nombre", nombre);
-        Acronym acronym = new Acronym();
         model.addAttribute("acronym", acronym);
+        model.addAttribute("nombre", nombre);
         return "acronymAdd";
     }
 

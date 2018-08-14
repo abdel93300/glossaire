@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Custom styles for this template -->
-    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
-    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/acronymAdd.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
@@ -17,61 +16,59 @@
 </head>
 
 <body>
-    <div class="topbar">
-        <div class="p-2"><img id="logo_dico" src="img/dico.png" alt="Dico photo"/></div>
-        <div class="p-4"><span id="dicodsi">DicoDSI</span></div>
-        <div class="ml-auto p-2"><img id="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"></div>
-    </div>
+<ul  class="ul1">
+    <li  class="li1" ><img class="logo_dico" id="logo_dico" src="img/dico.png" alt="Dico photo"/></li>
+    <li  class="li1" ><label class="dicodsi">DicoDsi</label></li>
+    <li class="float_right li1"><img id="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"/></li>
+</ul>
 
+<h2>&nbsp;&nbsp;Création acronyme</h2>
+<div>
+    <form  th:action="@{/acronymAdd}"  th:object="${acronym}" method="POST">
+        <!--<input th:type="hidden" name="id" th:field="${acronymForm.acronymId}" />-->
+        <div class="form-group col-lg-4">
+            <label for="formControlInput0">Acronyme (*) </label><br>
+            <input type="text" th:field="*{name}" id="formControlInput0" required />
 
-    <h2>Création acronyme</h2>
-    <br>
-    <div>
+        </div>
 
-        <form  th:action="@{/acronymAdd}"  th:object="${acronym}" method="POST">
-            <!--<input th:type="hidden" name="id" th:field="${acronymForm.acronymId}" />-->
-            <div class="form-group col-lg-4">
-                <label for="formControlInput0">Acronyme (*) </label><br>
-                <input type="text" th:field="*{name}" id="formControlInput0" required />
+        <div class="form-group col-lg-10">
+            <label for="exampleFormControlInput1">Définition courte (*)</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"  th:field="*{description.shortD}" required />
+        </div>
 
+        <div class="form-group col-lg-10">
+            <label for="exampleFormControlTextarea1">Définition longue</label>
+            <textarea th:field="*{description.longD}"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <div class="row col-lg-10">
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="mot clé 1" th:field="*{keyword1}"  />
             </div>
-            <br>
-
-            <div class="form-group col-lg-10">
-                <label for="exampleFormControlInput1">Définition courte (*)</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1"  th:field="*{description.shortD}" required />
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="mot clé 2" th:field="*{keyword2}"  />
             </div>
-            <br>
-
-            <div class="form-group col-lg-10">
-                <label for="exampleFormControlTextarea1">Définition longue</label>
-                <textarea th:field="*{description.longD}"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="mot clé 3" th:field="*{keyword3}" >
             </div>
-            <br/>
-            <div class="row col-lg-10">
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="mot clé 1" th:field="*{keyword1}"  />
-                </div>
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="mot clé 2" th:field="*{keyword2}"  />
-                </div>
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="mot clé 3" th:field="*{keyword3}" >
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="col-lg-6">
+        </div>
+        <br>
+        <div class="col-lg-6">
             <input class="btn-success" type="reset" value="Annuler" />
             <input class="btn-primary"  type="submit" value="Enregistrer" />
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+    <br>
+    <label >&nbsp;&nbsp;(*) : saisie requise </label>
+</div>
 
-    <div class="footbar">
-        <div class="mr-auto p-2"> <div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></div>
-        <div class="p-2"><a  class="ex2" href="#">A propos</a></div>
-        <div class="p-2"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></div>
-    </div>
+<div class="footbar">
+    <ul class="ul1">
+        <li><div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></li>
+        <li class="float-lg-right float_right"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></li>
+    </ul>
+</div>
+
 </body>
 </html>

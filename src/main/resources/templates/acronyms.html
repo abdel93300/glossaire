@@ -35,7 +35,7 @@
                     <th:block th:each="acronym : ${acronyms}">
                         <li style=" font-weight: bold;" th:text ="${acronym.name}"></li>
                         <li style="color:#52527a;"  th:text="${acronym.obsolete} ? '(obsolète)'"></li>
-                        <li class="ex2" style="color:#FF6633;A;"   th:text="${acronym.description.shortD}"></li>
+                        <li class="ex2" style="color:#FF6633A;"   th:text="${acronym.description.shortD}"></li>
                         <li th:text="${acronym.description.longD}"></li>
                         <li  style="color:#52527a;" th:text="|créé le  ${#dates.format(acronym.creation,'dd/MM/YYYY')}
                          par   ${acronym.author}|"></li>
@@ -53,12 +53,12 @@
 
 
 
- <div class="footbar">
+  <div class="footbar">
     <ul class="ul1">
-        <li><div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></li>
+        <li class="li1"><div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></li>
 
-        <li class="float-lg-right float_right"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></li>
+        <li class="float-lg-right float_right li1"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></li>
     </ul>
-</div>
+  </div>
 </body>
 </html>

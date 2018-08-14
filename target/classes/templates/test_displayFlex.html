@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Glossaire PE</title>
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </head>
+    <style>
+    .flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    color:white;
+       }
+
+   .flex-container2 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    background-color: yellow;
+
+    }
+
+    .flex-container3 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+    }
+
+
+    .flex-container4 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+
+    }
+    .flex-container5 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    justify-content: center;
+
+    }
+    .flex-item1 {
+    background: tomato;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+  .flex-item2 {
+    background: green;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+      .flex-item3 {
+    background: grey;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+      .flex-item4 {
+    background: purple;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+           .flex-item5 {
+    background: #D2691E;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+          .flex-item6 {
+    background: black;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+    .flex-item15 {
+    background: blue;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+    .flex-item14 {
+    background: blue;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+ }
+ </style>
+<body>
+<h3> flex & space-around (1 2 3 4)</h3>
+<ul class="flex-container">
+    <li class="flex-item1">1</li>
+    <li class="flex-item2">2</li>
+    <li class="flex-item3">3</li>
+    <li class="flex-item4">4</li>
+    <ul class="flex-container2">
+        <li class="flex-item5">5</li>
+        <li class="flex-item6">6</li>
+    </ul>
+    <h3> flex & flex-end (5 6)</h3>
+    <ul class="flex-container2">
+        <li class="flex-item5">5</li>
+        <li class="flex-item6">6</li>
+    </ul>
+</ul>
+<h3> flex & flex-end 8</h3>
+<ul class="flex-container2">
+    <li class="flex-item2">8</li>
+
+    <ul class="flex-container">
+        <li class="flex-item4">12</li>
+        <li class="flex-item5">13</li>
+    </ul>
+    <h3> flex start & space around 9 10</h3>
+    <ul class="flex-container">
+        <li class="flex-item4">9</li>
+        <li class="flex-item5">10</li>
+    </ul>
+
+
+</ul>
+<div>
+   <h3> display: flex;
+       justify-content: flex-start;</h3>
+    <div class="container">
+    <ul class="flex-container4">
+        <li class="flex-item1">1</li>
+        <li class="flex-item2">2</li>
+        <li class="flex-item3">3</li>
+        <li class="flex-item4">4</li>
+        <ul class="flex-container3">
+            <li class="flex-item1">1</li>
+            <li class="flex-item2">2</li>
+            <li class="flex-item3">3</li>
+            <li class="flex-item4">4</li>
+        </ul>
+
+    </ul>
+    </div>
+    <h3> display: block;
+        justify-content:inline;</h3>
+    <ul class="flex-container5">
+        <li class="flex-item1">1</li>
+        <li class="flex-item2">2</li>
+
+            <li class="flex-item2">8</li>
+
+            <li class="flex-item3">3</li>
+        <li class="flex-item4">4</li>
+    </ul>
+</div>
+</body>
+</html>
+

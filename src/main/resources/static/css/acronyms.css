@@ -76,6 +76,7 @@ div.of2 {
      padding: 0;
      overflow: hidden;
      background-color:#EBEBDC;
+     color:#E66E0A;
  }
 
  .li1 {
@@ -95,8 +96,8 @@ div.of2 {
 /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
-*//*
-
+*/
+/*
 
 @media (min-width: 1281px) {
 
@@ -163,8 +164,8 @@ div.of2 {
 /*
   ##Device = Tablets, Ipads  et Ipad Pro (portrait)
   ##Screen = B/w 768px to 1024px
-*//*
 */
+
 /*
 
 
@@ -205,16 +206,14 @@ div.of2 {
                 }
 }
 
-*//*
-
 */
+
 /*
   ##Device = Tablets, Ipads  (landscape)
   ##Screen = B/w 768px to 1024px
-*//*
 */
-/*
 
+/*
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
@@ -335,13 +334,11 @@ div.of2 {
    }
 }
 
-*//*
-
 */
+
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
-*//*
 */
 /*
 
@@ -378,6 +375,4 @@ div.of2 {
    .lstacro {
    font-size:1.5rem;
    }
-*//*
-
-}
+*/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glossaire PE</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+    <style>
+        .li1 {
+        float: left;
+        }
+        .flex-container {
+        padding: 0;
+        margin: 0;
+        height:120px;
+        list-style: none;
+        background-color:blue;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-evenly;
+        }
+
+        .flex-item {
+        background: tomato;
+        padding: 5px;
+        width: 50px;
+        height:50px;
+        margin-top: 5px;
+
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+        }
+    </style>
+<body>
+<ul class="flex-container">
+    <li ><img class="logo_dico" id="logo_dico" src="dico2.png" alt="Dico photo"/></li>
+    <li class="flex-item">2</li>
+    <li> <img class="logo_pe" id="logo_pe" src="logo2_PE.png" alt="logo photo"/></li>
+</ul>
+</body>
+</html>
+
