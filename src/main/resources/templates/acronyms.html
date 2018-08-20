@@ -15,21 +15,15 @@
                }
     </style>
 </head>
-<!--suppress Annotator -->
-
 <body>
-
-<ul  class="ul1">
-    <li  class="li1" ><img class="logo_dico" id="logo_dico" src="img/dico.png" alt="Dico photo"/></li>
-    <li  class="li1" ><label class="dicodsi">DicoDsi</label></li>
-    <li class="float_right li1"><img id="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"/></li>
-</ul>
-
-
-
-        <div align="left" style="margin-top:10px;margin-left:50px; font-size: 14px;">
-            <h6 th:text="|${nombre} terme(s) peuvent correspondre à votre recherche|"></h6>
-            <br>
+    <ul  class="ul1">
+        <li  class="li1" ><img class="logo_dico" id="logo_dico" src="img/dico.png" alt="Dico photo"/></li>
+        <li  class="li1" ><label class="dicodsi">DicoDsi</label></li>
+        <li class="float_right li1"><img id="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"/></li>
+    </ul>
+    <div align="left" style="margin-top:10px;margin-left:50px; font-size: 14px;">
+        <h6 th:text="|${nombre} terme(s) peuvent correspondre à votre recherche|"></h6>
+         <br>
             <div class="of1">
                 <ul class="ul2">
                     <th:block th:each="acronym : ${acronyms}">
@@ -44,37 +38,15 @@
                 </ul>
             </div>
             <br>
-
                  <div align="center" >
                     <a  class="ex2" style="color:#E66E0A; font-size:20px;" th:href="@{/acronymAdd}">Vous ne trouvez pas la définition recherchée, La créer ?</a>
                  </div>
-
         </div>
-
-
-
   <div class="footbar">
     <ul class="ul1">
         <li class="li1"><div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></li>
-
-<<<<<<< HEAD
-            <div class="col-lg-12 h-40 text-lg-right">
-                <ul class="list-inline mb-2">
-                    <li  class="list-inline-item">
-                        <a  class="ex2" style="color:#E66E0A;" href="#">A propos</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a  class="ex2" style="color:#E66E0A;" th:href="${mailto}" >Contacter l'administrateur</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-=======
-        <li class="float-lg-right float_right li1"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></li>
+        <li class="float-lg-right float_right li1"><a  class="ex2"  th:href="${mailto}" >Contacter l'administrateur</a></li>
     </ul>
   </div>
->>>>>>> responsive
 </body>
 </html>
