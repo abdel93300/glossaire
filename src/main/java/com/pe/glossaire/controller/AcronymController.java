@@ -69,10 +69,24 @@ public class AcronymController {
     }
 
     @GetMapping("/acronymAdd")
-    public String showAcronymAddPage(Model model) {
+    public String showAcronymAddPage(Long nombre, Model model, String dateJour ) {
+
+        Iterable<Acronym> acronyms = acronymService.retrieve();
+
+        List<Acronym> acronymsL = Lists.newArrayList(acronyms);
+        acronymsL.sort(Comparator.comparing(Acronym::getName));
+
+        nombre=acronyms.spliterator().getExactSizeIfKnown();
 
         Acronym acronym = new Acronym();
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+        LocalDate localDate = LocalDate.now();
+        dateJour=dtf.format(localDate);
+
+        model.addAttribute("dateJour", dateJour);
         model.addAttribute("acronym", acronym);
+        model.addAttribute("nombre", nombre);
         return "acronymAdd";
     }
 

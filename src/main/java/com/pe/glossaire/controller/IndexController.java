@@ -15,11 +15,14 @@ import java.time.format.DateTimeFormatter;
 
 @Controller
 public class IndexController {
+<<<<<<< HEAD
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Value("${contact.mailto}")
     private String mailto;
+=======
+>>>>>>> responsive
 
     @Autowired
     private AcronymService acronymService;
@@ -37,5 +40,7 @@ public class IndexController {
         model.addAttribute("mailto", mailto);
         return "index";
     }
+
+
 
 }
