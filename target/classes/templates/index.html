@@ -9,50 +9,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-
 <body>
-<!--   <ul class="ul1">
-        <li class="li1"><img class="logo_dico" id="logo_dico" src="img/dico.png" alt="Dico photo"/></li>
-        <li class="li1"><label class="dicodsi">DicoDsi</label></li>
-        <li class="float_right"><img class="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"/></li>
-    </ul> -->
-
-<!--<div class="container-fluid">
-  <ul class="ul1">
-        <li class="li1"><img class="logo_dico" id="logo_dico" src="img/dico.png" alt="Dico photo"/></li>
-        <li class="li1"><label class="dicodsi">DicoDsi</label></li>
-        <li class="float_right"><img class="logo_pe" src="img/logo_pe.png" alt="logo_pe photo"/></li>
-    </ul>
-</div>-->
-
-<div class="container">
-      <div class="row">
-         <!--<div class="col" >-->
-        <div class="mx-auto w-100 p-3 text-center">
-                  <p class="content">
-                      Bienvenue sur le dictionnaire partagé de la DSI.
-                      Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe
-                      pour obtenir sa définition.
-                      Si le terme recherché n'éxiste pas dans le Dico,
-                      n'hésitez pas à créer lorsque vous aurez les différents éléments
-                      nécessaires à sa création (libellé en clair et sa définition).
-                      Si la définition proposée vous semble erronée,
-                      vous avez la possibilité de la corriger.
-                      Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.
-                      Bonne navigation.
-                  </p>
-                  <div align="center">
-                      <a  class="ex2" href="/acronyms"><h3>Liste des acronymes</h3></a>
-                  </div>
-              </div>
-           </div>
+    <div id="wrap">
+       <!-- <div id="header">
+        </div>-->
+        <div id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto text-center">
+                        <p class="content">
+                            Bienvenue sur le dictionnaire partagé de la DSI.
+                            Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe
+                            pour obtenir sa définition.
+                            Si le terme recherché n'éxiste pas dans le Dico,
+                            n'hésitez pas à créer lorsque vous aurez les différents éléments
+                            nécessaires à sa création (libellé en clair et sa définition).
+                            Si la définition proposée vous semble erronée,
+                            vous avez la possibilité de la corriger.
+                            Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.<br>
+                            Bonne navigation.
+                        </p>
+                        <a class="link" href="/acronyms"><h4>Liste des acronymes</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="total">
+                <span th:text="|${nombre}  termes à la  date du ${dateJour}|"></span>
+            </div>
+            <div class="contact">
+                <span><a class="link" th:href="${mailto}">Contacter l'administrateur</a></span>
+            </div>
+        </div>
     </div>
-   <!--    <div class="footbar">
-      <ul class="ul1">
-          <li class="li1"><div class="float-lg-left nbleft"  th:text="|${nombre}  termes à la  date du ${dateJour}|"> </div></li>
-          <li class="float-lg-right float-right li1"><a  class="ex2"  href="mailto:sicommunication.00317@pole-emploi.fr?subject=Dico : demande d'intervention">Contacter l'administrateur</a></li>
-      </ul>
-      </div>  -->
-</div>
 </body>
 </html>
+

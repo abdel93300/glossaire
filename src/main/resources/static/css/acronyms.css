@@ -1,13 +1,13 @@
 
 .footbar {
-    width:100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: inline-block;
-    height:80px;
-    background-color:#EBEBDC;
-}
+     width:100%;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     display: inline-block;
+     height:80px;
+     background-color:#EBEBDC;
+ }
 #logo_dico {
     height:80px;
     width:80px;

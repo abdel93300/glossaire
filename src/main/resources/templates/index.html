@@ -10,27 +10,39 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
-      <div class="row">
-        <div class="mx-auto w-100 text-center">
-                  <p class="content">
-                      Bienvenue sur le dictionnaire partagé de la DSI.
-                      Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe
-                      pour obtenir sa définition.
-                      Si le terme recherché n'éxiste pas dans le Dico,
-                      n'hésitez pas à créer lorsque vous aurez les différents éléments
-                      nécessaires à sa création (libellé en clair et sa définition).
-                      Si la définition proposée vous semble erronée,
-                      vous avez la possibilité de la corriger.
-                      Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.
-                      Bonne navigation.
-                  </p>
-                  <div align="center">
-                      <a  class="ex2" href="/acronyms"><h3>Liste des acronymes</h3></a>
-                  </div>
-              </div>
-           </div>
+    <div id="wrap">
+       <!-- <div id="header">
+        </div>-->
+        <div id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto text-center">
+                        <p class="content">
+                            Bienvenue sur le dictionnaire partagé de la DSI.
+                            Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe
+                            pour obtenir sa définition.
+                            Si le terme recherché n'éxiste pas dans le Dico,
+                            n'hésitez pas à créer lorsque vous aurez les différents éléments
+                            nécessaires à sa création (libellé en clair et sa définition).
+                            Si la définition proposée vous semble erronée,
+                            vous avez la possibilité de la corriger.
+                            Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.<br>
+                            Bonne navigation.
+                        </p>
+                        <a class="link" href="/acronyms"><h4>Liste des acronymes</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="total">
+                <span th:text="|${nombre}  termes à la  date du ${dateJour}|"></span>
+            </div>
+            <div class="contact">
+                <span><a class="link" th:href="${mailto}">Contacter l'administrateur</a></span>
+            </div>
+        </div>
     </div>
- </div>
 </body>
 </html>
+

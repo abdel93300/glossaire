@@ -15,6 +15,12 @@ import java.time.format.DateTimeFormatter;
 
 @Controller
 public class IndexController {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Value("${contact.mailto}")
+    private String mailto;
+
     @Autowired
     private AcronymService acronymService;
 
