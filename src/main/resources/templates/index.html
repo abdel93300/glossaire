@@ -16,77 +16,28 @@
         header
     </div>
     <div id="main">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin faucibus laoreet. Cras ut egestas felis. Quisque efficitur tellus nec nisl fringilla maximus. Fusce vehicula congue tincidunt. Vestibulum euismod ultricies porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam et tincidunt tortor.
-
-        Maecenas sollicitudin ante dolor, sit amet rhoncus nisl ullamcorper a. Etiam diam quam, vestibulum id felis at, aliquam auctor sapien. Nam pharetra blandit lacus eu posuere. Nunc neque risus, vestibulum nec tincidunt in, venenatis ac dui. Morbi sit amet vestibulum sem. Etiam sit amet ex sed risus pulvinar suscipit sed eget nibh. Vestibulum imperdiet tincidunt molestie. Aliquam quis suscipit sem. Pellentesque sed volutpat mi, vitae tempor neque. Praesent tincidunt vitae dui ut placerat.
-
-        Etiam ac justo sapien. Nullam non faucibus libero. Nam id ultricies libero, sit amet volutpat ipsum. Etiam scelerisque orci ipsum, at commodo sem vestibulum eget. Donec at felis dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce maximus facilisis varius.
-
-        Phasellus efficitur quis massa egestas molestie. Ut auctor feugiat eros, id laoreet ligula posuere vel. Curabitur egestas elit iaculis dapibus feugiat. Etiam magna lorem, semper in ultrices nec, rhoncus et sem. In egestas eros non dolor lobortis aliquam. Vestibulum faucibus felis dictum eros vestibulum malesuada. Vivamus convallis maximus purus, eget tempus nulla venenatis blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent vel ex a tortor tempus euismod. In hac habitasse platea dictumst. Curabitur sit amet congue nisl. Aliquam odio elit, dignissim eget ultricies id, varius at orci.
-
-        Aliquam sed aliquet urna. Pellentesque ullamcorper ornare ex, vitae porttitor ante vulputate vestibulum. Ut ultrices porttitor turpis ac consequat. Proin porta tortor quis interdum condimentum. Nulla sed quam pharetra, laoreet lectus ut, tincidunt libero. Mauris maximus sem id turpis convallis, ut feugiat tortor malesuada. Integer viverra semper metus. Integer aliquam ullamcorper libero. Integer accumsan ultricies libero, sed rutrum lacus lobortis quis.
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin faucibus laoreet. Cras ut egestas felis. Quisque efficitur tellus nec nisl fringilla maximus. Fusce vehicula congue tincidunt. Vestibulum euismod ultricies porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam et tincidunt tortor.
-
-        Maecenas sollicitudin ante dolor, sit amet rhoncus nisl ullamcorper a. Etiam diam quam, vestibulum id felis at, aliquam auctor sapien. Nam pharetra blandit lacus eu posuere. Nunc neque risus, vestibulum nec tincidunt in, venenatis ac dui. Morbi sit amet vestibulum sem. Etiam sit amet ex sed risus pulvinar suscipit sed eget nibh. Vestibulum imperdiet tincidunt molestie. Aliquam quis suscipit sem. Pellentesque sed volutpat mi, vitae tempor neque. Praesent tincidunt vitae dui ut placerat.
-
-        Etiam ac justo sapien. Nullam non faucibus libero. Nam id ultricies libero, sit amet volutpat ipsum. Etiam scelerisque orci ipsum, at commodo sem vestibulum eget. Donec at felis dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce maximus facilisis varius.
-
-        Phasellus efficitur quis massa egestas molestie. Ut auctor feugiat eros, id laoreet ligula posuere vel. Curabitur egestas elit iaculis dapibus feugiat. Etiam magna lorem, semper in ultrices nec, rhoncus et sem. In egestas eros non dolor lobortis aliquam. Vestibulum faucibus felis dictum eros vestibulum malesuada. Vivamus convallis maximus purus, eget tempus nulla venenatis blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent vel ex a tortor tempus euismod. In hac habitasse platea dictumst. Curabitur sit amet congue nisl. Aliquam odio elit, dignissim eget ultricies id, varius at orci.
-
-        Aliquam sed aliquet urna. Pellentesque ullamcorper ornare ex, vitae porttitor ante vulputate vestibulum. Ut ultrices porttitor turpis ac consequat. Proin porta tortor quis interdum condimentum. Nulla sed quam pharetra, laoreet lectus ut, tincidunt libero. Mauris maximus sem id turpis convallis, ut feugiat tortor malesuada. Integer viverra semper metus. Integer aliquam ullamcorper libero. Integer accumsan ultricies libero, sed rutrum lacus lobortis quis.
-
+        <p class="welcome">
+        Bienvenue sur le dictionnaire partagé de la DSI.
+        Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe
+        pour obtenir sa définition.
+        Si le terme recherché n'éxiste pas dans le Dico,
+        n'hésitez pas à créer lorsque vous aurez les différents éléments
+        nécessaires à sa création (libellé en clair et sa définition).
+        Si la définition proposée vous semble erronée,
+        vous avez la possibilité de la corriger.
+        Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.<br>
+        Bonne navigation.
+        </p>
+        <a class="link" href="/acronyms"><h4 align="center">Liste des acronymes</h4></a>
     </div>
     <div id="footer">
         <div class="f-col">
-            <span class="total">2000 termes à la date du 23 janvier 2018</span>
+            <span class="total" th:text="|${nombre}  termes à la  date du ${dateJour}|"></span>
         </div>
         <div class="f-col contact">
             <a class="link" th:href="${mailto}">Contacter l'administrateur</a>
         </div>
     </div>
-
-
-    <!--<div id="wrap">-->
-        <!--<div id="header">-->
-            <!--header-->
-        <!--</div>-->
-        <!--<div id="main">-->
-            <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="mx-auto w-100 text-center">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<p class="content">&ndash;&gt;-->
-                            <!--&lt;!&ndash;Bienvenue sur le dictionnaire partagé de la DSI.&ndash;&gt;-->
-                            <!--&lt;!&ndash;Saisissez un terme, un acronyme ou des mots clé et cliquez sur la loupe&ndash;&gt;-->
-                            <!--&lt;!&ndash;pour obtenir sa définition.&ndash;&gt;-->
-                            <!--&lt;!&ndash;Si le terme recherché n'éxiste pas dans le Dico,&ndash;&gt;-->
-                            <!--&lt;!&ndash;n'hésitez pas à créer lorsque vous aurez les différents éléments&ndash;&gt;-->
-                            <!--&lt;!&ndash;nécessaires à sa création (libellé en clair et sa définition).&ndash;&gt;-->
-                            <!--&lt;!&ndash;Si la définition proposée vous semble erronée,&ndash;&gt;-->
-                            <!--&lt;!&ndash;vous avez la possibilité de la corriger.&ndash;&gt;-->
-                            <!--&lt;!&ndash;Si le terme ou acronyme n'est plus usité, déclarez le comme obsolète.<br>&ndash;&gt;-->
-                            <!--&lt;!&ndash;Bonne navigation.&ndash;&gt;-->
-                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a class="link" href="/acronyms"><h3 align="center">Liste des acronymes</h3></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div id="footer">-->
-            <!--&lt;!&ndash;<div class="total">&ndash;&gt;-->
-                <!--&lt;!&ndash;<span th:text="|${nombre}  termes à la  date du ${dateJour}|"></span>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="contact">&ndash;&gt;-->
-                <!--&lt;!&ndash;<span><a class="link" th:href="${mailto}">Contacter l'administrateur</a></span>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--<div class="f-col">-->
-                <!--<span>2000 termes à la date du 23 janvier 2018</span>-->
-            <!--</div>-->
-            <!--<div class="f-col contact">-->
-                <!--<span>contact: toto@gmail.com</span>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
 </body>
 </html>
 
