@@ -13,13 +13,47 @@ body{
 }
 
 #header{
-  position: relative;
-  background-color: yellow;
+  width: 100%;
+  height: 85px;
+  display:block;
+  background-color: #EBEBDC;
 }
+
+.logo_dico{
+   height:80px;
+   width:80px;
+   margin-left:10px;
+}
+
+.dicodsi{
+    color:#FF6633;
+    font-style:italic;
+    font-size:20px;
+    font-weight:600;
+    padding-top:25px;
+}
+
+.logo_pe{
+   height:85px;
+   width:180px;
+   float:right;
+}
+
+.logo {
+    display: inline-block;
+    text-align: center;
+    margin-left:2%;
+}
+
+.logo_caption {
+    display: inline-block;
+}
+
 #main{
   position relative;
   padding-bottom: 100px;
 }
+
 #footer{
   height: 80px;
   position: absolute;
@@ -49,6 +83,7 @@ body{
     color:#E66E0A;
     padding-right:2%;
 }
+
 a.link:hover, a.link:active {
     font-size: 110%;
     font-weight:bold;
@@ -65,10 +100,28 @@ a.link:hover, a.link:active {
     font-size:1.25rem;
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
+/* Extra small devices (ipad less than 768gpx) */
 @media (max-width: 767.98px) {
   .f-col {
     text-align: center;
     width: 100%;
+  }
+  #header {
+    display:block;
+    text-align: center;
+    height:110px;
+  }
+  .logo_dico {
+     height:80px;
+     width:80px;
+  }
+  .logo_caption {
+     display: block;
+   }
+  .dicodsi {
+    padding-top:0px;
+   }
+  .logo_pe {
+    display:none;
   }
 }
